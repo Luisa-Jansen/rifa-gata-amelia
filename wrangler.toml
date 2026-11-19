@@ -9,7 +9,7 @@ pages_build_output_dir = "public"
 [[d1_databases]]
 binding = "DB"
 database_name = "rifa-amelia"
-database_id = "00000000-0000-0000-0000-000000000000"
+database_id = "3f60946a-ca8b-4283-a0bd-088c00797c81"
 
 # Variáveis NÃO sensíveis (podem ficar no repositório).
 [vars]

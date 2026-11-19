@@ -46,7 +46,8 @@ async function pbkdf2Bits(password, salt, iterations) {
   return new Uint8Array(bits);
 }
 
-export async function hashPassword(password, iterations = 120000) {
+// Obs.: o Cloudflare Workers limita o PBKDF2 a 100.000 iterações (máximo permitido).
+export async function hashPassword(password, iterations = 100000) {
   const salt = crypto.getRandomValues(new Uint8Array(16));
   const bits = await pbkdf2Bits(password, salt, iterations);
   return `pbkdf2$${iterations}$${bytesToB64(salt)}$${bytesToB64(bits)}`;
