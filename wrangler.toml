@@ -1,0 +1,22 @@
+name = "rifa-gata-amelia"
+compatibility_date = "2024-11-01"
+pages_build_output_dir = "public"
+
+# Banco de dados D1 (SQLite gerenciado pela Cloudflare).
+# Rode:  wrangler d1 create rifa-amelia
+# e SUBSTITUA o database_id abaixo pelo id gerado (o valor atual é só um
+# placeholder para o desenvolvimento local funcionar).
+[[d1_databases]]
+binding = "DB"
+database_name = "rifa-amelia"
+database_id = "00000000-0000-0000-0000-000000000000"
+
+# Variáveis NÃO sensíveis (podem ficar no repositório).
+[vars]
+# Minutos até uma reserva pendente expirar e os números voltarem a ficar disponíveis.
+RESERVA_EXPIRA_MINUTOS = "120"
+
+# Segredos (NÃO ficam aqui). Configure com:
+#   wrangler pages secret put ADMIN_PASSWORD
+#   wrangler pages secret put SESSION_SECRET
+# Em desenvolvimento local, use o arquivo .dev.vars (veja .dev.vars.example).

@@ -1,0 +1,16 @@
+node_modules/
+.wrangler/
+.dev.vars
+dist/
+*.log
+.DS_Store
+.vscode/
+# Materiais de origem do briefing (não publicar no site)
+/*.docx
+/*.pdf
+/1.jpeg
+/2.jpeg
+/3.jpeg
+/Diagnosticos.png
+/Premiação.png
+/Números da rifa.png

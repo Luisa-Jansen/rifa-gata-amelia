@@ -1,0 +1,11 @@
+# Copie este arquivo para ".dev.vars" (sem .example) para desenvolvimento local.
+# NUNCA faça commit do arquivo .dev.vars — ele está no .gitignore.
+
+# Senha inicial do painel administrativo.
+# É usada apenas para criar/atualizar o hash no banco na primeira vez (rota /api/admin/setup).
+# Depois de criada, troque pelo próprio painel. Escolha algo forte.
+ADMIN_PASSWORD="troque-esta-senha"
+
+# Chave secreta para assinar os cookies de sessão do admin.
+# Gere uma aleatória, por exemplo:  openssl rand -hex 32
+SESSION_SECRET="gere-uma-chave-aleatoria-longa-e-secreta"
